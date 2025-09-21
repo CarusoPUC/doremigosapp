@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.mobile.piano.R
+import com.mobile.piano.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -24,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
                 .alpha(0f)
                 .setDuration(500)
                 .withEndAction {
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, HomeActivity::class.java))
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                     finish()
                 }

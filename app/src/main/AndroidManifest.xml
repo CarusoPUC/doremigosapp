@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Piano">
         <activity
+            android:name=".PautaActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -28,7 +31,7 @@
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

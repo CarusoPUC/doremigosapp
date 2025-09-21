@@ -1,4 +1,4 @@
-package com.seuprojeto.app
+package com.mobile.piano
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,6 +16,12 @@ class HomeActivity : AppCompatActivity() {
         val pianoVirtual = findViewById<LinearLayout>(R.id.btnPianoVirtual)
         pianoVirtual.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        // Clique Piano Virtual -> MainActivity
+        val pautaVirtual = findViewById<LinearLayout>(R.id.btnPauta)
+        pautaVirtual.setOnClickListener {
+            startActivity(Intent(this, PautaActivity::class.java))
         }
     }
 }

@@ -1,11 +1,14 @@
 package com.mobile.piano
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.media.SoundPool
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         R.id.key_si to R.raw.b,
         R.id.key_dod to R.raw.c4,
 
-        // Teclas pretas (placeholder d.wav)
+        // Teclas pretas
         R.id.key_do_sus to R.raw.db,
         R.id.key_re_sus to R.raw.eb,
         R.id.key_fa_sus to R.raw.gb,
@@ -47,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         setupKeys()
+        setupBackButton()
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -73,6 +77,15 @@ class MainActivity : AppCompatActivity() {
     private fun playNote(viewId: Int) {
         val soundId = noteSoundMap[viewId] ?: return
         soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
+    }
+
+    private fun setupBackButton() {
+        val btnVoltar = findViewById<ImageButton    >(R.id.btnVoltar)
+        btnVoltar?.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish() // fecha o piano ao voltar
+        }
     }
 
     override fun onDestroy() {

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pauta_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".PautaActivity">
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_back_button"
+        android:src="@drawable/ic_back_button"
+        android:contentDescription="Voltar"
+        android:layout_margin="8dp"
+        android:elevation="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Imagem da pauta sem notas -->
+    <ImageView
+        android:id="@+id/imgPauta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/paletaNotas"
+        app:srcCompat="@raw/pautav"
+        tools:ignore="ContentDescription" />
+
+    <!-- Área onde as notas cinzas aparecem sobre a pauta -->
+    <FrameLayout
+        android:id="@+id/overlayNotas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        android:fitsSystemWindows="false"
+        app:layout_constraintTop_toTopOf="@id/imgPauta"
+        app:layout_constraintBottom_toBottomOf="@id/imgPauta"
+        app:layout_constraintStart_toStartOf="@id/imgPauta"
+        app:layout_constraintEnd_toEndOf="@id/imgPauta">
+
+        <!-- 8 notas cinzas (nc.png) já posicionadas em diagonal.
+             Ajuste os margins conforme o tamanho real dos seus PNGs. -->
+        <ImageView
+            android:id="@+id/nc1"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="236dp"
+            android:translationY="-60dp"
+            app:srcCompat="@raw/ndc" />
+
+        <ImageView
+            android:id="@+id/nc2"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="336dp"
+            android:translationY="-80dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc3"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="436dp"
+            android:translationY="-104dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc4"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="536dp"
+            android:translationY="-140dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc5"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="636dp"
+            android:translationY="-160dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc6"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="736dp"
+            android:translationY="-186dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc7"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="836dp"
+            android:translationY="-216dp"
+            app:srcCompat="@raw/nc" />
+
+        <ImageView
+            android:id="@+id/nc8"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_gravity="start|bottom"
+            android:translationX="936dp"
+            android:translationY="-246dp"
+            app:srcCompat="@raw/nc" />
+    </FrameLayout>
+
+    <!-- Paleta inferior com os pincéis p1..p7 (notas coloridas) -->
+    <LinearLayout
+        android:id="@+id/paletaNotas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="-140dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- P1 - Dó -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DÓ"
+                android:textSize="25sp"
+                android:textColor="#FF7FB3"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p1"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p1" />
+        </LinearLayout>
+
+        <!-- P2 - Mi -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MI"
+                android:textSize="25sp"
+                android:textColor="#2D89B7"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p2"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p2" />
+        </LinearLayout>
+
+        <!-- P3 - Lá -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LÁ"
+                android:textSize="25sp"
+                android:textColor="#FA8430"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p3"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p3" />
+        </LinearLayout>
+
+        <!-- P4 - Ré -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RÉ"
+                android:textSize="25sp"
+                android:textColor="#FFC830"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p4"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p4" />
+        </LinearLayout>
+
+        <!-- P5 - Fá -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FÁ"
+                android:textSize="25sp"
+                android:textColor="#00A491"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p5"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p5" />
+        </LinearLayout>
+
+        <!-- P6 - Sol -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOL"
+                android:textSize="25sp"
+                android:textColor="#B46EFB"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p6"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p6" />
+        </LinearLayout>
+
+        <!-- P7 - Si -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SI"
+                android:textSize="25sp"
+                android:textColor="#FF3E3E"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageButton
+                android:id="@+id/brush_p7"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@raw/p7" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

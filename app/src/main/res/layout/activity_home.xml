@@ -8,30 +8,29 @@
     <!-- Logo -->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="230dp"
-        android:layout_height="100dp"
-        android:src="@raw/logo"
-        android:scaleType="fitCenter"
-        android:layout_alignParentTop="true"
+        android:layout_width="306dp"
+        android:layout_height="195dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp" />
+        android:scaleType="fitCenter"
+        android:src="@raw/logo" />
 
-    <!-- Caixa do título -->
+    <!-- Caixa do título centralizada -->
     <TextView
         android:id="@+id/tvFerramentas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="45dp"
-        android:layout_toEndOf="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
         android:background="@drawable/bg_title_box"
-    android:paddingHorizontal="16dp"
-        android:paddingVertical="6dp"
-        android:text="FERRAMENTAS DE APRENDIZADO"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="FERRAMENTAS DE APRENDIZAGEM"
         android:textColor="#2D89B7"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <!-- Linha de cards -->
@@ -42,10 +41,9 @@
         android:layout_below="@id/tvFerramentas"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="112dp"
         android:weightSum="3">
 
-        <!-- Card Piano Virtual -->
         <!-- Card Piano Virtual -->
         <LinearLayout
             android:id="@+id/btnPianoVirtual"

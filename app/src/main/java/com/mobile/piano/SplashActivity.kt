@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
-import com.mobile.piano.R
-import com.mobile.piano.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
 

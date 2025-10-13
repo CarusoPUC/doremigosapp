@@ -34,11 +34,11 @@
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:gravity="center"
         android:background="#fff"
-        android:layout_marginRight="66dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="27dp">
 
         <TextView
             android:id="@+id/tvSom"
@@ -90,74 +90,74 @@
              Ajuste os margins conforme o tamanho real dos seus PNGs. -->
         <ImageView
             android:id="@+id/nc1"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="236dp"
-            android:translationY="-60dp"
+            android:translationX="196dp"
+            android:translationY="-40dp"
             app:srcCompat="@raw/ndc" />
 
         <ImageView
             android:id="@+id/nc2"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="336dp"
-            android:translationY="-78dp"
+            android:translationX="306dp"
+            android:translationY="-65dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc3"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="436dp"
-            android:translationY="-106dp"
+            android:translationX="416dp"
+            android:translationY="-95dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc4"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="536dp"
-            android:translationY="-133dp"
+            android:translationX="526dp"
+            android:translationY="-121dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc5"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
             android:translationX="636dp"
-            android:translationY="-165dp"
+            android:translationY="-153dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc6"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="736dp"
-            android:translationY="-193dp"
+            android:translationX="746dp"
+            android:translationY="-179dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc7"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="836dp"
-            android:translationY="-222dp"
+            android:translationX="856dp"
+            android:translationY="-208dp"
             app:srcCompat="@raw/nc" />
 
         <ImageView
             android:id="@+id/nc8"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_gravity="start|bottom"
-            android:translationX="936dp"
-            android:translationY="-248dp"
+            android:translationX="966dp"
+            android:translationY="-235dp"
             app:srcCompat="@raw/nc" />
     </FrameLayout>
 
